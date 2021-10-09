@@ -15,10 +15,10 @@ services:
     volumes:
       - supervisor-socket:/var/run/supervisor
       - rsyslog-socket:/var/run/awx-rsyslog/
-      - "./src/config/SECRET_KEY:/etc/tower/SECRET_KEY"
-      - "./src/config/environment.sh:/etc/tower/conf.d/environment.sh"
-      - "./src/config/nginx.conf:/etc/nginx/nginx.conf"
-      - "./src/config/credentials.py:/etc/tower/conf.d/credentials.py"
+      - "./config/SECRET_KEY:/etc/tower/SECRET_KEY"
+      - "./config/environment.sh:/etc/tower/conf.d/environment.sh"
+      - "./config/nginx.conf:/etc/nginx/nginx.conf"
+      - "./config/credentials.py:/etc/tower/conf.d/credentials.py"
       - redis-socket:/var/run/redis/
     environment:
       http_proxy: 
@@ -39,10 +39,10 @@ services:
     volumes:
       - supervisor-socket:/var/run/supervisor
       - rsyslog-socket:/var/run/awx-rsyslog/
-      - "./src/config/SECRET_KEY:/etc/tower/SECRET_KEY"
-      - "./src/config/environment.sh:/etc/tower/conf.d/environment.sh"
-      - "./src/config/nginx.conf:/etc/nginx/nginx.conf"
-      - "./src/config/credentials.py:/etc/tower/conf.d/credentials.py"
+      - "./config/SECRET_KEY:/etc/tower/SECRET_KEY"
+      - "./config/environment.sh:/etc/tower/conf.d/environment.sh"
+      - "./config/nginx.conf:/etc/nginx/nginx.conf"
+      - "./config/credentials.py:/etc/tower/conf.d/credentials.py"
       - redis-socket:/var/run/redis/
     environment:
       http_proxy: 
@@ -86,7 +86,7 @@ services:
       - redis
       - postgres
     volumes:
-      - "./src/config/default.conf:/etc/nginx/conf.d/default.conf"
+      - "./config/default.conf:/etc/nginx/conf.d/default.conf"
     ports:
       - "80:80"
       - "443:443"
