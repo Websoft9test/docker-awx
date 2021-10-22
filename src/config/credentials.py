@@ -4,7 +4,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': "awx",
         'USER': "awx",
-        'PASSWORD': "awxpass",
+        'PASSWORD': "123456",
         'HOST': "postgres",
         'PORT': "5432",
     }
