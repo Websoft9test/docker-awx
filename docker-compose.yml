@@ -98,4 +98,5 @@ volumes:
 
 networks:
   default:
-      name: "awx"
+    name: ${APP_NETWORK}
+    external: true
